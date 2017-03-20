@@ -4,10 +4,7 @@ export const applyMiddleware = (...middleWares) => {
   }
   const reversedMiddleWares = middleWares.reverse();
   return (action, state) => {
-    let newState = {...state};
-    reversedMiddleWares.forEach(middleWare => {
-      newState = middleWare(action, newState);
-    });
+    let newState = reversedMiddleWares.reduce((newState, middleWare) => middleWare(action, newState), {...state});
     return newState;
   };
 }
