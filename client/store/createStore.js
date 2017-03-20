@@ -26,8 +26,9 @@ export const createStore = (reducers, preloadedState, enhancer) => {
     state = newState;
   };
 
-  const store = {};
-  store.getState = () => ({...state});
-  store.dispatch = (action) => handleAction(action);
+  const store = {
+    getState: () => ({...state}),
+    dispatch: (action) => handleAction(action)
+  };
   return store;
 }
