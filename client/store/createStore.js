@@ -7,10 +7,10 @@ import { splitArgs } from './util.js';
  * middleWares is an array of function(action, style).
  * the order of execution would be from the right most to the left most
  */
-export const createStore = (reducers, ...others) => {
+export const createStore = (reducers, preloadedState, enhancer) => {
   let state = {count: 0};
 
-  let { initialState, middleWare } = splitArgs(others);
+  let { initialState, middleWare } = splitArgs([preloadedState, enhancer]);
 
   if(initialState) {
     state = initialState;
