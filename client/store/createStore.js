@@ -4,8 +4,9 @@ import { splitArgs } from './util.js';
 
 
 /*
- * middleWares is an array of function(action, style).
- * the order of execution would be from the right most to the left most
+ * reducer is required
+ * Optional preloaded state: an object
+ * Optional enhancer: the middleware function to apply to the store
  */
 export const createStore = (reducers, preloadedState, enhancer) => {
   let state = {count: 0};
