@@ -1,6 +1,6 @@
 ## About this app
 
-This is to demonstrate all the concepts of redux store. All in simple code. Pure & stateless functions. Write your own. No external dependencies except for babel to transpile to node js. It runs in node environment
+A nodejs app demonstrating all the concepts of the redux store. All in simple code. Pure & stateless functions. Write your own. No external dependencies except for babel to transpile to node js. It runs in node environment
 
 ## What is a redux store?
 - A store in redux is to manage the state of your application. There is only one single instance of the store object through out the app. The store object is simple an object with 2 methods:
